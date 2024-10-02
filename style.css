@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffcccc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #e60073;
+}
+
+p {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #e60073;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc005c;
+}
+
+.heart {
+    display: none;
+    margin-top: 20px;
+}
+
+.heart svg {
+    width: 100px;
+    height: 100px;
+    fill: #e60073;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .heart svg {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .heart svg {
+        width: 60px;
+        height: 60px;
+    }
+}
